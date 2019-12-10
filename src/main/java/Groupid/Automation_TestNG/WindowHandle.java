@@ -22,6 +22,7 @@ public class WindowHandle {
 		driver.findElement(By.xpath("//*[contains(@href,'popup.php')]")).click();
 		
 		String mainWindow=driver.getWindowHandle();
+		System.out.println(mainWindow);
 		
 		Set<String> s1=driver.getWindowHandles();
 		Iterator<String> i1=s1.iterator();
@@ -47,6 +48,10 @@ public class WindowHandle {
 			// Switching to Parent window i.e Main Window.
             driver.switchTo().window(mainWindow);
 		}
+		// to handle multiple windows
+		//ArrayList<String> newtab=new ArrayList<String>(driver.getWindowHandles());
+		//driver.switchTo().window(newtab.get(1));
+		
 		
 		
 
