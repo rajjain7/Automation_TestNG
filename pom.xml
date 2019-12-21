@@ -57,7 +57,7 @@
     <groupId>org.springframework</groupId>
     <artifactId>spring-test</artifactId>
     <version>5.2.2.RELEASE</version>
-    <scope>test</scope>
+ 
 </dependency>
 	
 	<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
