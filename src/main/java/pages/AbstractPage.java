@@ -13,20 +13,21 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 import org.openqa.selenium.JavascriptExecutor;
 
 
 
 @SuppressWarnings("unused")
+@Component
 public abstract class AbstractPage {
 	
-	
-	
-	private WebDriver driver;
+private WebDriver driver;
 	
 	public WebDriver getDriver() {
 		return driver;
 	}
+	
 	
 	public abstract boolean isCurrentPage();
 	
@@ -122,16 +123,5 @@ public abstract class AbstractPage {
 		actions.moveToElement(getDriver().findElement(by)).click().build().perform();
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 }
+

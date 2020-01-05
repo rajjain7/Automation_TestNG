@@ -52,8 +52,6 @@ public class WindowHandle {
 		//ArrayList<String> newtab=new ArrayList<String>(driver.getWindowHandles());
 		//driver.switchTo().window(newtab.get(1));
 		
-		
-		
 
 	}
 

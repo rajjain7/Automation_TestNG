@@ -1,5 +1,7 @@
 package tests;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
@@ -9,27 +11,35 @@ import org.springframework.test.context.ContextConfiguration;
 
 import configuration.TestFrameworkConfiguration;
 import pages.AbstractPage;
+import pages.LoginPage;
 
 
 @SuppressWarnings("unused")
 @ContextConfiguration(classes=TestFrameworkConfiguration.class)
+
 public class LoginTest {
 	
-	@Value("${url}")
+	
+	
+	@Value("${web.url}")
 	private String host;
 	
-	@Value("${driverPath}")
+	@Value("${driver.Path}")
 	private String driverPath;
 	
 	@Autowired
-	AbstractPage abstractPage;
+	LoginPage loginPage;
 	
 	
 	@Test
 	public void goToUrl() {
-		System.setProperty("webdriver.chrome.driver",driverPath);
-		abstractPage.getDriver().get(host);
-		
+		System.setProperty("webdriver.chrome.driver","C:\\Program Files\\chromedriver.exe");
+		System.out.println("a");
+		WebDriver driver=new ChromeDriver();
+		System.out.println("b");
+		loginPage.open("www.google.com");
+		System.out.println("c");
+
 		
 	}
 }

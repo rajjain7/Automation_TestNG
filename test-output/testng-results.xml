@@ -2,19 +2,16 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="73" started-at="2019-12-21T14:00:55 IST" finished-at="2019-12-21T14:00:55 IST">
+  <suite name="Default suite" duration-ms="3295" started-at="2019-12-30T19:44:03 IST" finished-at="2019-12-30T19:44:06 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="73" started-at="2019-12-21T14:00:55 IST" finished-at="2019-12-21T14:00:55 IST">
+    <test name="Default test" duration-ms="3295" started-at="2019-12-30T19:44:03 IST" finished-at="2019-12-30T19:44:06 IST">
       <class name="tests.LoginTest">
-        <test-method status="FAIL" signature="goToUrl()[pri:0, instance:tests.LoginTest@74294adb]" name="goToUrl" duration-ms="17" started-at="2019-12-21T14:00:55 IST" finished-at="2019-12-21T14:00:55 IST">
+        <test-method status="FAIL" signature="goToUrl()[pri:0, instance:tests.LoginTest@74294adb]" name="goToUrl" duration-ms="3231" started-at="2019-12-30T19:44:03 IST" finished-at="2019-12-30T19:44:06 IST">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at java.util.Hashtable.put(Unknown Source)
-at java.util.Properties.setProperty(Unknown Source)
-at java.lang.System.setProperty(Unknown Source)
-at tests.LoginTest.goToUrl(LoginTest.java:30)
+at tests.LoginTest.goToUrl(LoginTest.java:38)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -50,6 +47,6 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </reporter-output>
         </test-method> <!-- goToUrl -->
       </class> <!-- tests.LoginTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

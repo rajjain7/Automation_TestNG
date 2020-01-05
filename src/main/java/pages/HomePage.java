@@ -1,7 +1,9 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.springframework.stereotype.Component;
 
+@Component
 public class HomePage extends AbstractPage {
 	
 	@Override

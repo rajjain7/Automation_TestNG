@@ -3,8 +3,10 @@ package pages;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.springframework.stereotype.Component;
 
 @SuppressWarnings("unused")
 public class LoginPage extends AbstractPage{
@@ -36,6 +38,12 @@ public class LoginPage extends AbstractPage{
 		WebDriverWait webDriverWait=new WebDriverWait(getDriver(),50);
 		webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("__w2_wDTbpDuX11_name_link")));
 	
+	}
+	
+	public void open(String host) {
+		
+		getDriver().navigate().to(host);
+		
 	}
 
 }
