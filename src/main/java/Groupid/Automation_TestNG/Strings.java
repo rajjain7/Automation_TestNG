@@ -30,8 +30,14 @@ public class Strings {
 		sb.trimToSize();
 		System.out.println(sb.capacity());
 		
+		String digit="1111abc";
+		if(digit.matches("\\d+")) {
+			System.out.println("string contains only digits");
+		}
+		else {
+			System.out.println("string does not contains only digits");
+			
+		}
 		
-		
-
 	}
 }
