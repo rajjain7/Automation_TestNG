@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,8 +25,13 @@ public class FindLinks {
 			System.out.println(l.getText());
 			
 		}
+		driver.navigate().to("https://www.google.com/");
+		driver.manage().window().maximize();
+		JavascriptExecutor js=(JavascriptExecutor) driver;
+		js.executeScript("alert('raj alert');");
 		
-		driver.close();	
+		
+		//driver.close();	
 	}
 
 }

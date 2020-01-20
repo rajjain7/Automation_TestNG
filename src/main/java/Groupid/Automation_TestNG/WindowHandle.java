@@ -6,6 +6,7 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class WindowHandle {
 	
@@ -16,7 +17,11 @@ public class WindowHandle {
 		
 		System.setProperty("webdriver.chrome.driver","C:\\Program Files\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
-		driver.get("http://demo.guru99.com/popup.php");
+		driver.get("http://jsbin.com/osebed/2");
+		Select drpdwn=new Select(driver.findElement(By.id("fruits")));
+		//System.out.println(drpdwn.getFirstSelectedOption());
+		System.out.println(drpdwn.isMultiple());
+		driver.navigate().to("http://demo.guru99.com/popup.php");
 		driver.manage().window().maximize();
 		
 		driver.findElement(By.xpath("//*[contains(@href,'popup.php')]")).click();
@@ -52,7 +57,9 @@ public class WindowHandle {
 		//ArrayList<String> newtab=new ArrayList<String>(driver.getWindowHandles());
 		//driver.switchTo().window(newtab.get(1));
 		
-
 	}
+	
+	
+	
 
 }
