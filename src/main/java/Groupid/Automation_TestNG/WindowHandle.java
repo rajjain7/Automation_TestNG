@@ -19,7 +19,7 @@ public class WindowHandle {
 		WebDriver driver=new ChromeDriver();
 		driver.get("http://jsbin.com/osebed/2");
 		Select drpdwn=new Select(driver.findElement(By.id("fruits")));
-		//System.out.println(drpdwn.getFirstSelectedOption());
+		String h=drpdwn.getFirstSelectedOption().getText();
 		System.out.println(drpdwn.isMultiple());
 		driver.navigate().to("http://demo.guru99.com/popup.php");
 		driver.manage().window().maximize();
